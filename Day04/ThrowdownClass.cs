@@ -3,13 +3,13 @@ using Xunit;
 
 namespace HackerRank.Day04
 {
-    // Day 4: Class vs. Instance
+    // Day 4: Throwdown — Class vs. Instance
     // https://www.hackerrank.com/challenges/30-class-vs-instance/problem
-    public class Person
+    public class ThrowdownClass
     {
         private int _age;
 
-        public Person(int initialAge)
+        public ThrowdownClass(int initialAge)
         {
             if (initialAge < 0)
             {
@@ -52,7 +52,7 @@ namespace HackerRank.Day04
         [InlineData(18)]
         public void Test(int initialAge)
         {
-            var person = new Person(initialAge);
+            var person = new ThrowdownClass(initialAge);
             person.AmIOld();
             for (var j = 0; j < 3; j++)
             {
