@@ -1,33 +1,43 @@
+using System;
+using Xunit;
+
 namespace HackerRank.Day03
 {
     // Day 3: Intro to Conditional Statements
     // https://www.hackerrank.com/challenges/30-conditional-statements/problem
     public static class ConquerConditionals
     {
-        public static string Calculate(int n)
+        public static void Calculate(int n)
         {
             if (n % 2 == 1)
             {
-             
-                return "Weird";
+                Console.WriteLine("Weird");
             }
-
-            if (n >= 2 && n <= 5)
+            else switch (n)
             {
-                return "Not Weird";
+                case >= 2 and <= 5:
+                    Console.WriteLine("Not Weird");
+                    break;
+                case >= 6 and <= 20:
+                    Console.WriteLine("Weird");
+                    break;
+                case > 20:
+                    Console.WriteLine("Not Weird");
+                    break;
+                default:
+                    Console.WriteLine("Not Weird");
+                    break;
             }
-
-            if (n >= 6 && n <= 20)
-            {
-                return "Weird";
-            }
-
-            if (n > 20)
-            {
-                return "Not Weird";
-            }
-
-            return "Not Weird";
+        }
+    }
+    public class ConquerConditionalsTests
+    {
+        [Theory]
+        [InlineData(3)]
+        [InlineData(24)]
+        public void Test(int n)
+        {
+            ConquerConditionals.Calculate(n);
         }
     }
 }

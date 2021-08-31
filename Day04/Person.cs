@@ -1,4 +1,5 @@
 using System;
+using Xunit;
 
 namespace HackerRank.Day04
 {
@@ -6,7 +7,7 @@ namespace HackerRank.Day04
     // https://www.hackerrank.com/challenges/30-class-vs-instance/problem
     public class Person
     {
-        public int age;
+        private int _age;
 
         public Person(int initialAge)
         {
@@ -16,17 +17,17 @@ namespace HackerRank.Day04
             }
             else
             {
-                age = initialAge;
+                _age = initialAge;
             }
         }
 
-        public void amIOld()
+        public void AmIOld()
         {
-            if (age < 13)
+            if (_age < 13)
             {
                 Console.WriteLine("You are young.");
             }
-            else if (age < 18)
+            else if (_age < 18)
             {
                 Console.WriteLine("You are a teenager.");
             }
@@ -36,9 +37,28 @@ namespace HackerRank.Day04
             }
         }
 
-        public void yearPasses()
+        public void YearPasses()
         {
-            age++;
+            _age++;
+        }
+    }
+
+    public class PersonTests
+    {
+        [Theory]
+        [InlineData(-1)]
+        [InlineData(10)]
+        [InlineData(16)]
+        [InlineData(18)]
+        public void Test(int initialAge)
+        {
+            var person = new Person(initialAge);
+            person.AmIOld();
+            for (var j = 0; j < 3; j++)
+            {
+                person.YearPasses();
+            }
+            person.AmIOld();
         }
     }
 }
