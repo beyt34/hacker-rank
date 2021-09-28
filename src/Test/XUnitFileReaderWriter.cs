@@ -7,7 +7,7 @@ namespace HackerRank.UnitTests
     {
         private readonly ITestOutputHelper _output;
 
-        public XUnitFileReaderWriter(ITestOutputHelper output, string inputFile = "_input.txt", string outputFile = "_expected.txt")
+        public XUnitFileReaderWriter(ITestOutputHelper output, string inputFile = "_input.txt", string outputFile = "_output.txt")
             : base(inputFile, outputFile)
         {
             _output = output;

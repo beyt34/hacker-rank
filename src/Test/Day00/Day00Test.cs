@@ -14,11 +14,9 @@ namespace HackerRank.UnitTests.Day00
         [Fact]
         public void Test1()
         {
-            using var readerWriter = new XUnitFileReaderWriter(
-                _output,
-                "Day00\\_input.txt",
-                "Day00\\_output.txt"
-                );
+            const string inputFile = "Day00\\_input.txt";
+            const string outputFile = "Day00\\_output.txt";
+            using var readerWriter = new XUnitFileReaderWriter(_output, inputFile, outputFile);
 
             HackerRank.Day00.Program.Solve(readerWriter);
         }

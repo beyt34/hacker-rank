@@ -4,6 +4,8 @@
     <TargetFramework>net5.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +24,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Day00\HackerRank.Day00.csproj" />
     <ProjectReference Include="..\Day01\HackerRank.Day01.csproj" />
+    <ProjectReference Include="..\Day02\HackerRank.Day02.csproj" />
     <ProjectReference Include="..\Helper\HackerRank.Helper.csproj" />
   </ItemGroup>
 
@@ -36,6 +39,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Day00\_output.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Day02\_input2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Day02\_input1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Day02\_output2.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Day02\_output1.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

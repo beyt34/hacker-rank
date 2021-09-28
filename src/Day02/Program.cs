@@ -1,32 +1,30 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Globalization;
 using HackerRank.Helper;
 
-namespace HackerRank.Day01
+namespace HackerRank.Day02
 {
     public static class Program
     {
+        private static int Result(double mealCost, int tipPercent, int taxPercent)
+        {
+            var total = Convert.ToInt32(
+                mealCost +
+                (mealCost * tipPercent / 100) +
+                (mealCost * taxPercent / 100)
+            );
+
+            return total;
+        }
+
         public static void Solve(IReaderWriter readerWriter)
         {
-            var i = 4;
-            var d = 4.0;
-            var s = "HackerRank ";
+            var mealCost = readerWriter.ReadLineToDouble();
+            var tipPercent = readerWriter.ReadLineToInt();
+            var taxPercent = readerWriter.ReadLineToInt();
 
-            // Read and save an integer, double, and String to your variables.
-            var ii = readerWriter.ReadLineToInt();
-            var dd = readerWriter.ReadLineToDouble();
-            var ss = readerWriter.ReadLine();
-
-            // Print the sum of both integer variables on a new line.
-            readerWriter.WriteLine(i + ii);
-
-            // Print the sum of the double variables on a new line.
-            readerWriter.WriteLine((d + dd).ToString("N1", CultureInfo.InvariantCulture));
-
-            // Concatenate and print the String variables on a new line
-            // The 's' variable above should be printed first.
-            readerWriter.WriteLine(s + ss);
+            var total = Result(mealCost, tipPercent, taxPercent);
+            readerWriter.WriteLine(total);
         }
 
         public static void Main(string[] args)

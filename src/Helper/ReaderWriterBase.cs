@@ -1,16 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace HackerRank.Helper
 {
     public abstract class ReaderWriterBase : IReaderWriter
     {
         public abstract string ReadLine();
-        
+
         public abstract void Write(string format, params object[] args);
-        
+
         public abstract void WriteLine(string format, params object[] args);
-        
+
         public void WriteLine(object o)
         {
             WriteLine(o.ToString());
@@ -37,7 +38,7 @@ namespace HackerRank.Helper
         public double ReadLineToDouble()
         {
             var line = ReadLine();
-            return double.Parse(line.Trim());
+            return double.Parse(line.Trim(), NumberStyles.AllowDecimalPoint, CultureInfo.InvariantCulture);
         }
 
         public int[] ReadLineToIntArray()
