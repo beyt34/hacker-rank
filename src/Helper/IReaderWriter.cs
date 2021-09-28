@@ -7,6 +7,7 @@ namespace HackerRank.Helper
         string ReadLine();
         int ReadLineToInt();
         long ReadLineToLong();
+        double ReadLineToDouble();
         int[] ReadLineToIntArray();
         long[] ReadLineToLongArray();
         int[] ReadLinesToIntArray();

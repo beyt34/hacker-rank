@@ -21,10 +21,17 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Day00\HackerRank.Day00.csproj" />
+    <ProjectReference Include="..\Day01\HackerRank.Day01.csproj" />
     <ProjectReference Include="..\Helper\HackerRank.Helper.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Day01\_input.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Day01\_output.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Day00\_input.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
